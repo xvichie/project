@@ -1,0 +1,115 @@
+<div class="add-song">
+  <div class="top">
+  <section class="label">
+    <div>
+      <h1>
+        {{"catalogue.ADD_SONG" | translate}}
+      </h1>
+    </div>
+  </section>
+  <div class="fields">
+      <label class="small-label">{{"catalogue.ENTER_SONG_NAME" | translate}}</label>
+      <br>
+      <input
+      [(ngModel)]="searchKey"
+      type="text">
+  </div>
+  <div class="error" *ngIf="searchHasError">
+    {{"errors.ENTER_MOVIE_NAME" | translate}}
+  </div>
+  <div class="bottom">
+    <button class="search-button" (click)="search()">Search</button>
+    <div class="last-three-searches">
+      <span class="badge" (click)="fetchSong(name)" *ngFor="let name of lastThreeSearches">
+        {{ name }}
+      </span>
+    </div>
+  </div>
+</div>
+  <div class="sides">
+  <div *ngIf="selectedSong">
+    <h2>{{selectedSong.title}}</h2>
+    <img [src]="selectedSong.image" alt="">
+    <h3>{{selectedSong.artist}}</h3>
+  </div>
+  <div class="" *ngIf="selectedSong">
+    <form [formGroup]="form" (submit)="submit()">
+      <div >
+          <label for="review" class="col-sm-2 col-form-label">Review</label>
+          <div>
+            <textarea
+              formControlName="review"
+              class="form-control"
+              id="review"
+            ></textarea>
+          </div>
+        </div>
+        <div class="right">
+          <label for="rating" class="">Rating</label>
+          <div class="">
+            <span class="ms-2" *ngFor="let rating of ratings">
+              <input
+                type="radio"
+                class="form-check-input"
+                [value]="rating"
+                formControlName="rating"
+              />
+            </span>
+          </div>
+        </div>
+        <div class="">
+          <label for="status" class="">Status</label>
+          <div class="">
+            <select class="form-select" formControlName="status">
+              <option [value]="status.Watched">
+                {{ "catalogue.WATCHED" | translate }}
+              </option>
+              <option [value]="status.WatchLater">
+                {{ "catalogue.WATCH_LATER" | translate }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="" *ngIf="canWatchLater">
+          <label for="status" class=""
+            >When To Watch</label
+          >
+          <div class="">
+            <select class="form-select" formControlName="whenToWatch">
+              <option [value]="null" hidden>
+                {{ "catalogue.SELECT" | translate }}
+              </option>
+              <option *ngFor="let w of whenToWatch" [value]="w.value">
+                {{ w.label | translate }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="submit">Add</button>
+        <ng-container *ngIf="submitted && form.invalid">
+          <div
+            class="alert alert-danger mt-2"
+            role="alert"
+            *ngIf="form.controls.review?.errors?.required"
+          >
+            რევიუ სავალდებულოა
+          </div>
+          <div
+            class="alert alert-danger mt-2"
+            role="alert"
+            *ngIf="form.controls.review?.errors?.minlength"
+          >
+            განხილვა უნდა იყოს მინიმუმ 10 სიმბოლო
+          </div>
+          <div
+            class="alert alert-danger mt-2"
+            role="alert"
+            *ngIf="form.controls.whenToWatch?.errors?.required"
+          >
+            გთხოვთ მონიშნოთ როდის გინდათ ყურება
+          </div>
+        </ng-container>
+      </form>
+    </div>
+  </div>
+</div>

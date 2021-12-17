@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+$background-color: #212121;
+$accent-color: #04e0ff;
+$second-accent-color: #44e9ff;
+* {
+  font-family: "Bakbak One", cursive;
+  color: $accent-color;
+}
+
+.add-song {
+  height: 89vh;
+  background: url("/assets/images/background.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+  }
+  .label div h1 {
+    color: $accent-color;
+    font-size: 96px;
+    font-weight: bold;
+  }
+  .fields {
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    input {
+      width: 300px;
+      height: 30px;
+    }
+  }
+  .error {
+    color: red;
+  }
+  .last-three-searches {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .badge {
+    background-color: $accent-color;
+    color: black;
+    height: 40px;
+    width: 70px;
+    border-radius: 5px;
+  }
+  .sides {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .right {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .small-label {
+    font-size: 32px;
+  }
+  .bottom {
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .search-button {
+    width: 80px;
+    height: 50px;
+  }
+}
+.submit {
+  background-color: $accent-color;
+  color: black;
+}

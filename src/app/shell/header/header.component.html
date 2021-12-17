@@ -1,0 +1,18 @@
+<div class="header-div">
+    <a href="" class="header-logo">
+       <img height="80px" src="assets/images/musifyLogoLong.png" alt="">
+    </a>
+    <div class="header-right">
+        <ng-container *ngIf="!isLoggedIn">
+            <button (click)="goToSignIn()" class="header-buttons">{{'auth.SIGN_IN' | translate}}</button>
+            <button (click)="goToSignUp()" class="header-buttons">{{'auth.SIGN_UP' | translate}}</button>
+        </ng-container>
+        <button *ngIf="isLoggedIn" (click)="signOut()" class="header-buttons">{{'auth.SIGN_OUT' | translate}}</button>
+        <button (click)="en()" class="header-flag">
+            <img src="assets/images/en.png">
+        </button>
+        <button (click)="ka()" class="header-flag">
+            <img src="assets/images/ka.png">
+        </button>
+    </div>
+</div>

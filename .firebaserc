@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "musify-86975": {
+      "hosting": {
+        "musify-project": [
+          "musify-86975"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "musify-86975"
+  }
+}

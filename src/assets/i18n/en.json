@@ -1,0 +1,28 @@
+{
+    "errors": {
+        "NOT_FOUND": "Page not found",
+        "ENTER_MOVIE_NAME": "You must Song name!"
+      },
+      "auth": {
+        "SIGN_IN": "Sign In",
+        "SIGN_UP": "Sign Up",
+        "EMAIL": "Email",
+        "PASSWORD": "Password",
+        "REPEAT_PASSWORD": "Repeat Password",
+        "SIGN_OUT": "Sign Out"
+      },
+      "catalogue": {
+        "ADD_SONG": "Add Song",
+        "ENTER_SONG_NAME": "Enter Song Name...",
+        "SEARCH": "Search",
+        "WATCHED": "Watched",
+        "WATCH_LATER": "Watch Later",
+        "TOMORROW": "Tomorrow",
+        "THIS_WEEK": "This Week",
+        "THIS_MONTH": "This Month",
+        "THIS_YEAR": "This Year",
+        "SELECT": "Select...",
+        "SONG_HAS_BEEN_ADDED": "Song has been added",
+        "SONG_LISTENED":"Songs You Have Listened To"
+      }
+}

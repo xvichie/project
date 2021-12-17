@@ -3,6 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  SongApiBase:'http://ws.audioscrobbler.com/2.0/?method=track.search&track=',
+  SongApiNext: '&api_key=b966beeeebfa3717607690e01bdde626&format=json',
+  firebase: {
+    projectId: 'musify-86975',
+    appId: '1:524273216495:web:91bea01734c7326625a41a',
+    storageBucket: 'musify-86975.appspot.com',
+    apiKey: 'AIzaSyCPm1QIUruh8UhuwXmKdIcff-Tuna1241s',
+    authDomain: 'musify-86975.firebaseapp.com',
+    messagingSenderId: '524273216495',
+  },
   production: false
 };
 

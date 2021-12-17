@@ -1,0 +1,47 @@
+$background-color: #212121;
+$accent-color: #04e0ff;
+$second-accent-color: #44e9ff;
+* {
+  margin: 0;
+  padding: 0;
+}
+.header-div {
+  background-color: $background-color;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  .header-logo {
+    margin-left: 20px;
+  }
+  .header-right {
+    width: 300px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    .header-flag {
+      background: transparent;
+      border: 0px solid #ffffff;
+      margin-left: 10px;
+    }
+    .header-flag:hover {
+      cursor: pointer;
+    }
+
+    .header-buttons {
+      border-radius: 5px;
+      font-weight: bold;
+      background: transparent;
+      border: 3px solid $accent-color;
+      color: white;
+      width: 80px;
+      height: 50px;
+      margin-left: 20px;
+    }
+    .header-buttons:hover {
+      background: $accent-color;
+      color: $background-color;
+      border: 3px solid $second-accent-color;
+    }
+  }
+}
